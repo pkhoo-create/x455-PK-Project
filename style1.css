@@ -1,0 +1,40 @@
+body {
+    background-image: linear-gradient(skyblue,white);
+}
+
+.card-body{
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 16px;
+}
+.card-header{
+    font-size: 30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 25px;
+    font-weight: bolder;
+    padding-top: -100px;
+    
+}
+
+div.a {
+    text-indent: 16px;
+}
+
+
+div.ex1 {
+    width: 1065px;
+    height: 300px;
+    overflow: scroll;
+}
+
+  
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: lightskyblue;
+    color: white;
+    margin-top: 16px;
+  }
+

@@ -1,0 +1,20 @@
+body{
+    background-image: linear-gradient(skyblue,white);
+}
+
+
+h1 {
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: purple;
+
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: lightskyblue;
+    color: white;
+    margin-top: 16px;
+  }

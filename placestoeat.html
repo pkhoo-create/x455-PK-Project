@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fascinating San Francisco</title>
+
+    <!--This is the Bootstrap CSS -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style3.css">
+    
+</head>
+<body>
+    
+<div class="container">
+  <div>
+          <!--The Navaigation-->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#"><img src="assets/Asset 1.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link" href="Learnmore.html">Learn more </a>
+                  <a class="nav-item nav-link" href="Travel.html">Travel</a>
+                  <a class="nav-item nav-link" href="placestoeat.html">Places to eat</a>
+                  <a class="nav-item nav-link" href="lastpage.html">Images</a>
+                  <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                </div>
+              </div>
+            </nav>
+            </div>
+          
+
+
+          <!-- Jumbotron -->
+
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Places to Eat</h1>
+              
+          
+            </div>
+          </div>
+
+
+          <!--chart-->
+
+          
+<table id="myTable">
+  <tr>
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable(0)">Name of the Restaurant</th>
+    <th onclick="sortTable(1)">Food</th>
+  </tr>
+  <tr>
+    <td>Rich Table</td>
+    <td>New American</td>
+  </tr>
+  <tr>
+    <td>The Morris</td>
+    <td>New American</td>
+  </tr>
+  <tr>
+    <td>Al's Place</td>
+    <td>Californian</td>
+  </tr>
+  <tr>
+    <td>Acquerello</td>
+    <td>Northern Italian</td>
+  </tr>
+  <tr>
+    <td>Frascati</td>
+    <td>Italian</td>
+  </tr>
+  <tr>
+    <td>Atelier Crenn</td>
+    <td>Modern French</td>
+  </tr>
+  <tr>
+    <td>Cafe Tiramisu</td>
+    <td>Italian</td>
+  </tr>
+  <tr>
+    <td>Brenda's French Soul Face</td>
+    <td>Southern</td>
+  </tr>
+</table>
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+<!-- 21:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-21by9">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50460.41902205545!2d-122.46375828281107!3d37.77184575163177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e1c6201a6b3%3A0xdd4285d4ab09b5e0!2sStarbelly!5e0!3m2!1sen!2sus!4v1652323935387!5m2!1sen!2sus" width="600" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+          
+
+ 
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+    </div>
+
+     <!--footer-->    
+
+<footer>
+  <p>Author: Fantastic San Francsico <br>
+  <a href="mailto:SF@Travel.com">SF@Travel.com</a></p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+    <!--This is the Boostrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</body>
+</html>

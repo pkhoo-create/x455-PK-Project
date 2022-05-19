@@ -1,0 +1,48 @@
+body {
+    background-image: linear-gradient(skyblue,white);
+}
+
+.display-4{
+    color: purple;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+table {
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+        padding-bottom: 50px;
+      }
+      
+      th {
+        cursor: pointer;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 16px;
+        color: purple;
+    
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2
+      }
+
+.embed-responsive .embed-responsive-21by9{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 16px;
+    
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: lightskyblue;
+  color: white;
+  margin-top: 16px;
+}
+

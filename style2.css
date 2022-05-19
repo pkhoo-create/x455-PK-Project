@@ -1,0 +1,21 @@
+body {
+    background-image: linear-gradient(skyblue,white);
+}
+
+.display-4{
+    color: blueviolet;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.embed-responsive-item{
+    padding-top: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: lightskyblue;
+    color: white;
+    margin-top: 16px;
+  }
